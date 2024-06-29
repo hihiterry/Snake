@@ -247,15 +247,15 @@ function handleTouchMove(event) {
     
         if (Math.abs(xDiff_num) > Math.abs(yDiff_num)) {
             if (xDiff_num > 0) {
-                toward_str="left";
+                if (toward_str!="right") toward_str="left";
             } else {
-                toward_str="right";
+                if (toward_str!="left") toward_str="right";
             }
         } else {
             if (yDiff_num > 0) {
-                toward_str="up";
+                if (toward_str!="down") toward_str="up";
             } else {
-                toward_str="down";
+                if (toward_str!="up") toward_str="down";
             }
         }
         xStart_num = null;
