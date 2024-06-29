@@ -234,6 +234,7 @@ function handleTouchStart(event) {
 }
 
 function handleTouchMove(event) {
+    event.preventDefault();
     if(gameState_num===0){
         if (!xStart_num || !yStart_num) {
             return;
@@ -260,7 +261,6 @@ function handleTouchMove(event) {
         }
         xStart_num = null;
         yStart_num = null;
-        event.preventDefault();
     }
     else{
         if(gameState_num===1 || gameState_num===2){
